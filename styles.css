@@ -1,0 +1,130 @@
+:root {
+    --white:  hsl(0, 0%, 95%);
+} 
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--white);
+    font-family: 'lexend deca', sans-serif;
+}
+
+main {
+    padding: 1.5rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    border-radius: .5rem; 
+    flex-wrap: wrap; 
+    align-items: stretch;
+    justify-content: center;  
+}
+
+.card {
+    width: 320px;   
+    padding: 2.5rem;  
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: space-around;
+    gap: 1rem;  
+}
+
+.card:nth-of-type(1) {
+    --background: hsl(31, 77%, 52%);
+    border-radius: .5rem .5rem 0 0 ; 
+}
+
+.card:nth-of-type(2) {
+    --background: hsl(184, 100%, 22%);
+}
+ 
+.card:nth-of-type(3) {
+   --background:  hsl(179, 100%, 13%);
+    border-radius: 0 0 .5rem .5rem;
+}  
+ 
+.title {
+    color: var(--white); 
+    text-transform: uppercase;
+    font-family: 'big shoulders display', sans-serif;
+    font-size: 2.3rem;
+    margin-bottom: 0;
+}
+
+.paragraph {
+   color: hsla(0, 0%, 100%, 0.75);
+   font-size: 15px; 
+}
+
+.btn {
+    border-color: transparent;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-family: inherit;
+    color: var(--background); 
+    font-size: inherit; 
+}
+
+.btn:hover {
+    border: 2px solid var(--white);
+    color: var(--white);
+    background: var(--background); 
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: .8rem;
+}
+
+a {
+    color: hsl(184, 100%, 22%);
+    text-decoration: none;
+}
+
+a:hover {
+    color:hsl(31, 77%, 52%);
+}
+
+@media screen and (min-width: 688px) and (max-width: 1008px) {
+    .card {
+        flex-grow: 1;
+    }
+
+    .card:nth-of-type(1) {
+        border-radius: .5rem 0 0 0;
+    }
+
+    .card:nth-of-type(2) {
+        border-radius: 0 .5rem 0 0;
+    }
+}
+
+@media screen and (min-width: 1008px) {
+    .paragraph {
+        margin-bottom: 3rem;
+    }
+
+    .card:nth-of-type(1) {
+        border-radius: .5rem 0 0 .5rem;
+    }
+
+    .card:nth-of-type(2) {
+        border-radius:  0 ;
+    }
+
+    .card:nth-of-type(3) {
+        border-radius: 0 .5rem .5rem 0;
+    }
+}
